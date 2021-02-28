@@ -6,6 +6,7 @@ val itemstoRemove =
 [
 	<cyclicmagic:solidifier>,
 	<cyclicmagic:melter>,
+	<cyclicmagic:builder_pattern>,
 ]
  as IItemStack[];
 
@@ -23,5 +24,8 @@ recipes.addShaped(<cyclicmagic:melter>, [
 	[<ore:dustPyrotheum>, <embers:block_furnace>, <ore:dustPyrotheum>], 
 	[<ore:plateSteel>, <techreborn:dynamiccell>, <ore:plateSteel>]
 ]);
+
+recipes.addShaped(<cyclicmagic:builder_pattern>, [[<moreplates:redstone_alloy_plate>, <ore:blockGlassHardened>, <moreplates:redstone_alloy_plate>],[<actuallyadditions:item_crystal:2>, <enderio:item_material>, <actuallyadditions:item_crystal:2>], [<moreplates:redstone_alloy_plate>, <ore:blockGlassHardened>, <moreplates:redstone_alloy_plate>]]);
+
 ##########################################################################################
 print("==================== end of mods blank.zs ====================");

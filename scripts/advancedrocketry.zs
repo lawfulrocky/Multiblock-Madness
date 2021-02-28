@@ -5,6 +5,7 @@ import mods.immersiveengineering.Crusher;
 import mods.thermalexpansion.Pulverizer;
 import mods.mekanism.enrichment;
 import mods.advancedrocketry.PrecisionAssembler;
+import mods.advancedrocketry.Crystallizer;
 
 print("==================== loading mods advancedrocketry-ssp.zs ====================");
 ##########################################################################################
@@ -40,10 +41,13 @@ mods.advancedrocketry.PlatePresser.addRecipe(<thermalfoundation:material:32>*5,<
 
 recipes.addShaped(<libvulpes:advstructuremachine> * 5, [[<libvulpes:structuremachine>, <techreborn:plates:38>, <libvulpes:structuremachine>],[<techreborn:plates:38>, <libvulpes:structuremachine>, <techreborn:plates:38>], [<libvulpes:structuremachine>, <techreborn:plates:38>, <libvulpes:structuremachine>]]);
 
+//Celestial Crystal
+Crystallizer.addRecipe(<astralsorcery:itemcelestialcrystal>, 2400, 5000, <astralsorcery:itemrockcrystalsimple>, <astralsorcery:itemcraftingcomponent:2>); 
 
+
+//Dilithium
 Crusher.removeRecipe(<libvulpes:productgem>);
 Pulverizer.removeRecipe(<libvulpes:ore0>);
-
 enrichment.removeRecipe(<libvulpes:ore0>);
 enrichment.removeRecipe(<libvulpes:productdust>);
 
@@ -80,5 +84,6 @@ PrecisionAssembler.addRecipe(<advancedrocketry:itemupgrade:3>, 2400, 25000, <adv
 PrecisionAssembler.addRecipe(<advancedrocketry:itemupgrade:4>, 2400, 25000, <advancedrocketry:ic:3>, <advancedrocketry:ic:2>, <libvulpes:battery>, <advancedrocketry:lens>);
 PrecisionAssembler.addRecipe(<advancedrocketry:itemupgrade>, 2400, 25000, <advancedrocketry:ic:3>, <advancedrocketry:ic>, <minecraft:redstone>, <minecraft:redstone_torch>);
 PrecisionAssembler.addRecipe(<advancedrocketry:itemupgrade:1>, 2400, 25000, <advancedrocketry:ic:3>, <advancedrocketry:ic:2>, <minecraft:diamond>, <minecraft:fire_charge>);
+
 ##########################################################################################
 print("==================== end of mods advancedrocketry-ssp.zs ====================");

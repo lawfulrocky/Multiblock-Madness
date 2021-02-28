@@ -38,8 +38,8 @@ for item in itemstoRemove {
 recipes.addShapedMirrored(<enderio:item_material:22>*8, [[<minecraft:sand>, <minecraft:clay_ball>, <minecraft:gravel>],[<minecraft:clay_ball>, <enderio:item_material:20>, <minecraft:clay_ball>], [<minecraft:gravel>, <minecraft:clay_ball>, <minecraft:sand>]]);
 recipes.addShapeless(<embers:blend_caminite>*2, [<enderio:item_material:22>,<enderio:item_material:22>]);
 recipes.addShapeless(<tconstruct:soil>*4, [<enderio:item_material:22>,<enderio:item_material:22>,<enderio:item_material:22>,<enderio:item_material:22>]);
-recipes.addShaped(<enderio:item_material:22>*8, [[<tconstruct:soil>, <tconstruct:soil>, <tconstruct:soil>],[<tconstruct:soil>, <enderio:item_material:20>, <tconstruct:soil>], [<tconstruct:soil>, <tconstruct:soil>, <tconstruct:soil>]]);
-recipes.addShaped(<enderio:item_material:22>*8, [[<embers:blend_caminite>, <embers:blend_caminite>, <embers:blend_caminite>],[<embers:blend_caminite>, <enderio:item_material:20>, <embers:blend_caminite>], [<embers:blend_caminite>, <embers:blend_caminite>, <embers:blend_caminite>]]);
+//recipes.addShaped(<enderio:item_material:22>*8, [[<tconstruct:soil>, <tconstruct:soil>, <tconstruct:soil>],[<tconstruct:soil>, <enderio:item_material:20>, <tconstruct:soil>], [<tconstruct:soil>, <tconstruct:soil>, <tconstruct:soil>]]);
+//recipes.addShaped(<enderio:item_material:22>*8, [[<embers:blend_caminite>, <embers:blend_caminite>, <embers:blend_caminite>],[<embers:blend_caminite>, <enderio:item_material:20>, <embers:blend_caminite>], [<embers:blend_caminite>, <embers:blend_caminite>, <embers:blend_caminite>]]);
 
 
 //scaffolding
@@ -343,12 +343,18 @@ AlloySmelter.addRecipe(<enderio:item_material:73>, [<enderio:item_material:11>, 
 
 //Energetic Gear
 InductionSmelter.addRecipe(<enderio:item_material:12>, <enderio:item_material:73>, <enderio:item_alloy_ingot:1>*4, 50000);
-ArcFurnace.addRecipe(<enderio:item_material:12>, <enderio:item_material:73>, null, 500, 4096, [<enderio:item_alloy_ingot:1>*4], "Alloying");
 AlloySmelter.addRecipe(<enderio:item_material:12>, [<enderio:item_material:73>, <enderio:item_alloy_ingot:1>*4], 50000);
 
 //Vibrant Gear
 InductionSmelter.addRecipe(<enderio:item_material:13>, <enderio:item_material:12>, <enderio:item_alloy_ingot:2>*4, 100000);
 AlloySmelter.addRecipe(<enderio:item_material:13>, [<enderio:item_material:12>, <enderio:item_alloy_ingot:2>*4], 100000);
+
+
+//Manylan
+furnace.remove(<tconstruct:ingots:2>);
+alloy_furnace.removeRecipeWithOutput([<tconstruct:ingots:2>]);
+ArcFurnace.removeRecipe(<tconstruct:ingots:2>);
+blastFurnace.addRecipe(<tconstruct:ingots:2>, null, <tconstruct:ingots>, <tconstruct:ingots:1>, 1800, 80, 2000);
 
 val alloystoAdapt =
 [
@@ -361,7 +367,6 @@ val alloystoAdapt =
 <enderio:item_alloy_ingot:6>,
 <enderio:item_alloy_ingot:7>,
 <enderio:item_alloy_ingot>,
-<nuclearcraft:alloy:1>,
 <nuclearcraft:alloy:6>,
 <tconstruct:ingots:2>,
 <tconstruct:ingots:5>,

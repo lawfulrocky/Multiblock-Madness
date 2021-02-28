@@ -86,6 +86,9 @@ Alloy.removeRecipe(<liquid:milk_chocolate>);
 Alloy.removeRecipe(<liquid:hydrated_gelatin>);
 Alloy.removeRecipe(<liquid:marshmallow>);
 Alloy.removeRecipe(<liquid:clay>);
+Alloy.removeRecipe(<liquid:tough>);
+Alloy.removeRecipe(<liquid:manyullyn>);
+
 
 //Doesnt seem to work for these
 Alloy.removeRecipe(<liquid:osmiridium>);
